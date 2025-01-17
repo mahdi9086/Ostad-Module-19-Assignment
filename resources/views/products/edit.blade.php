@@ -11,6 +11,11 @@
             @csrf
             @method('PUT')
             <div class="mb-3">
+                <label for="product_id" class="form-label">Product ID</label>
+                <input type="text" class="form-control" name="product_id" id="product_id" value="{{ old('product_id', $product->product_id) }}" required>
+                @error('product_id') <small class="text-danger">{{ $message }}</small> @enderror
+            </div>
+            <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="name" value="{{ old('name', $product->name) }}" required>
                 @error('name') <small class="text-danger">{{ $message }}</small> @enderror

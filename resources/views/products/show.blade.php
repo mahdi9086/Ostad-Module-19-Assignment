@@ -17,10 +17,12 @@
         <p class="card-text">{{ $product->description }}</p>
         <div class="row g-0">
             <div class="col-md-2">
+                <h4>Product ID:</h4>
                 <h5>Price:</h5>
                 <h5>Stock:</h5>
             </div>
             <div class="col-md-10">
+                <h4 class="card-text">{{ $product->product_id }}</h4>
                 <h5 class="card-text">${{ $product->price }}</h5>
                 <h5 class="card-text">{{ $product->stock }}</h5>
             </div>
